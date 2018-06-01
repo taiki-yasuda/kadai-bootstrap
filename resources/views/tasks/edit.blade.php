@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Write content for each page here -->
-<h1>id: {{ $task->id }} のメッセージ編集ページ</h1>
+<h1>Edit No.{{ $task->id }}</h1>
 
 
     {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
