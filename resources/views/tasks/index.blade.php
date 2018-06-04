@@ -9,9 +9,9 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>task</th>
-                    <th>content</th>
+                    <th><span class="label label-success">No</span></th>
+                    <th><span class="label label-success">task</span></th>
+                    <th><span class="label label-success">content</span></th>
                 </tr>
             </thead>
             <tbody>

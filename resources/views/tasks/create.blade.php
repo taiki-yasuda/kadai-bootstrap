@@ -19,7 +19,7 @@
                     {!! Form::text('content', null, ['class' => 'form-control']) !!}
                 </div>
                 
-                {!! Form::submit('Add', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit('Add', ['class' => 'btn btn-success']) !!}
         
             {!! Form::close() !!}
         </div>

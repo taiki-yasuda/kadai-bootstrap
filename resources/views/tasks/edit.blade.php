@@ -19,7 +19,7 @@
                     {!! Form::text('content', null, ['class' => 'form-control']) !!}
                 </div>
         
-                {!! Form::submit('update', ['class' => 'btn btn-default']) !!}
+                {!! Form::submit('update', ['class' => 'btn btn-primary btn-sm']) !!}
         
             {!! Form::close() !!}
         </div>
