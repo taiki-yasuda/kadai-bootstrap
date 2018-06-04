@@ -23,6 +23,8 @@
 
    {!! link_to_route('tasks.edit', 'Edit this message', ['id' => $task->id], ['class' => 'btn btn-default']) !!}
 
+<br><br>
+
     {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
         {!! Form::submit('delete', ['class' => 'btn btn-danger']) !!}
     {!! Form::close() !!}
