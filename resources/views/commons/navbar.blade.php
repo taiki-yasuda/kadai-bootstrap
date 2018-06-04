@@ -12,9 +12,15 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>{!! link_to_route('tasks.store', 'Home') !!}</li>
-                    <li>{!! link_to_route('tasks.store', 'Index') !!}</li>
-                    <li>{!! link_to_route('tasks.create', 'Add new tasks') !!}</li>
+                    <li><button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-plane"></span>
+                        {!! link_to_route('tasks.store', 'Home') !!}</li></button>
+                        <li><button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        {!! link_to_route('tasks.store', 'Index') !!}</li></button>
+                        <li><button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        {!! link_to_route('tasks.create', 'Add new tasks') !!}</li></button>
                 </ul>
             </div>
         </div>
