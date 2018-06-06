@@ -15,13 +15,18 @@
                     
                     <li><button type="button" class="btn btn-link">
                     <span class="glyphicon glyphicon-user"></span>
-                    {!! link_to_route('tasks.store', 'Sign-up') !!}</li></button>
+                    <li>{!! link_to_route('signup.get', 'Signup') !!}</li></button>
+                    
                     <li><button type="button" class="btn btn-link">
                     <span class="glyphicon glyphicon-ok"></span>
                     {!! link_to_route('tasks.store', 'Log-in') !!}</li></button>
+                    
+                    <li><a href="#">Login</a></li>
+                    
                     <li><button type="button" class="btn btn-link">
                     <span class="glyphicon glyphicon-th-list"></span>
                     {!! link_to_route('tasks.store', 'Tasklists') !!}</li></button>
+                    
                     <li><button type="button" class="btn btn-link">
                     <span class="glyphicon glyphicon-edit"></span>
                     {!! link_to_route('tasks.create', 'Add new tasks') !!}</li></button>
