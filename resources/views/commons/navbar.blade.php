@@ -14,7 +14,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     
                     @if (Auth::check())
-                        <li><a href="#">Users</a></li>
+                        <li>{!! link_to_route('users.index', 'Users') !!}</li>
+                        
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -24,7 +25,7 @@
                             </ul>
                         </li>
                     @else
-                        <li><button type="button" class="btn btn-link">
+                    <li><button type="button" class="btn btn-link">
                     <span class="glyphicon glyphicon-user"></span>
                     <br>{!! link_to_route('signup.get', 'Signup') !!}</li></button>
                     
