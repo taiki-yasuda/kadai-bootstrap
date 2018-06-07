@@ -9,19 +9,20 @@
             <div>
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $task->created_at }}</span>
             </div>
-            <div>
-                <p>status: {!! nl2br(e($task->status)) !!}</p>
-                <p>task: {!! nl2br(e($task->content)) !!}</p>
-            </div>
-            <div>
+            
+            <div class="btn-toolbar">
                 @if (Auth::user()->id == $task->user_id)
                 
-                {!! link_to_route('tasks.edit', 'Edit', ['id' => $task->id], ['class' => 'btn btn-primary btn-xs active']) !!}
-                    {!! Form::open(['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
-                    {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
-                    {!! Form::close() !!}
-                    
-                    
+                <div>
+                <p>status: {!! nl2br(e($task->status)) !!}</p>
+                <p>task: {!! nl2br(e($task->content)) !!}</p>
+                </div>
+                
+                {!! link_to_route('tasks.edit', 'Edit', ['id' => $task->id], ['class' => 'btn btn-primary btn-xs']) !!} 
+                   
+                {!! Form::open(['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!} 
+                {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                {!! Form::close() !!}
                     
                 @endif
             </div>

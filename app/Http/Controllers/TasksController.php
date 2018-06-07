@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Task;    // add
+use App\Task;
 
 use App\Http\Controllers\Controller;
 
