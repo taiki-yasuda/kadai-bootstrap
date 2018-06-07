@@ -15,7 +15,7 @@
         
         <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
             <ul class="nav nav-tabs nav-justified">
-                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">TimeLine <span class="badge">{{ $count_tasks }}</span></a></li>
+                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">TimeLine <span class="label label-success">{{ $count_tasks }}<span class="glyphicon glyphicon-pencil"></span></span></a></li>
                 <li><a href="#">Followings</a></li>
                 <li><a href="#">Followers</a></li>
             </ul>
