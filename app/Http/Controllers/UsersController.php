@@ -16,12 +16,19 @@ class UsersController extends Controller
             'users' => $users,
         ]);
     }
+    
     public function show($id)
     {
         $user = User::find($id);
+        $tasks = $user->tasks()->orderBy('created_at', 'desc')->paginate(10);
 
-        return view('users.show', [
+        $data = [
             'user' => $user,
-        ]);
+            'tasks' => $tasks,
+        ];
+
+        $data += $this->counts($user);
+
+        return view('users.show', $data);
     }
 }
