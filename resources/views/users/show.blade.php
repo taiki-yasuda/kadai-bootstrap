@@ -13,7 +13,7 @@
             </div>
         </aside>
         
-        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+        <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
             <ul class="nav nav-tabs nav-justified">
                 <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">TimeLine <span class="badge">{{ $count_tasks }}</span></a></li>
                 <li><a href="#">Followings</a></li>
@@ -22,9 +22,13 @@
             @if (Auth::user()->id == $user->id)
                   {!! Form::open(['route' => 'tasks.store']) !!}
                       <div class="form-group">
-                          {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'placeholder' => "write content", 'rows' => '2']) !!}
-                          {!! Form::textarea('status', old('status'), ['class' => 'form-control', 'placeholder' => "write status", 'rows' => '1']) !!}
-                          {!! Form::submit('Post', ['class' => 'btn btn-primary btn-block']) !!}
+                          <br><label class="col-xs-6 control-label">status</label>
+                          {!! Form::textarea('status', old('status'), ['class' => 'form-control', 'placeholder' => "Write status", 'rows' => '1']) !!}
+                          
+                          <br><label class="col-xs-6 control-label">task</label>
+                          {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'placeholder' => "Write task", 'rows' => '2']) !!}
+                          
+                          <br>{!! Form::submit('Post', ['class' => 'btn btn-primary btn-block active']) !!}<br>
                       </div>
                   {!! Form::close() !!}
             @endif

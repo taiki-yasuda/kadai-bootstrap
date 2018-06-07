@@ -33,13 +33,6 @@
                     <span class="glyphicon glyphicon-ok"></span>
                     <br>{!! link_to_route('login', 'Login') !!}</li></button>
                     
-                    <li><button type="button" class="btn btn-link">
-                    <span class="glyphicon glyphicon-th-list"></span>
-                    <br>{!! link_to_route('tasks.store', 'Tasklists') !!}</li></button>
-                    
-                    <li><button type="button" class="btn btn-link">
-                    <span class="glyphicon glyphicon-edit"></span>
-                    <br>{!! link_to_route('tasks.create', 'Add new tasks') !!}</li></button>
                     @endif
                     
                 </ul>
