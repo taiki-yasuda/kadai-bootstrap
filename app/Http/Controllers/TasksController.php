@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Controllers\Controller;
+use App\Task;    // add
 
-use App\task;
+use App\Http\Controllers\Controller;
 
 class TasksController extends Controller
 {
@@ -33,6 +33,7 @@ class TasksController extends Controller
         }
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -56,7 +57,7 @@ class TasksController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'status' => 'required|max:20',
+            'status' => 'required|max:191',
             'content' => 'required|max:191',
         ]);
         
@@ -64,8 +65,8 @@ class TasksController extends Controller
             'status' => $request->status,
             'content' => $request->content,
         ]);
-        
-        return redirect('/');
+
+        return redirect()->back();
     }
 
     /**
@@ -108,10 +109,9 @@ class TasksController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'status' => 'required|max:20',
+            'status' => 'required|max:10',
             'content' => 'required|max:191',
-        ]);
-        
+        ]);        
         
         $task = Task::find($id);
         $task->status = $request->status;
