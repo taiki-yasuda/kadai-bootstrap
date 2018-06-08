@@ -2,6 +2,9 @@
 
 @section('content')
 
+
+@if (Auth::check())
+
 <!-- Write content for each page here -->
 <h1>Edit No.{{ $task->id }}</h1>
 
@@ -24,5 +27,14 @@
             {!! Form::close() !!}
         </div>
     </div>
+@else
+        <div class="center jumbotron">
+          <div class="text-center">
+             <h1>Welcome to the Tasklists</h1>
+             {!! link_to_route('signup.get', 'Sign up now!', null, ['class' => 'btn btn-lg btn-success']) !!}
+          </div>
+        </div>
+@endif
+
 
 @endsection

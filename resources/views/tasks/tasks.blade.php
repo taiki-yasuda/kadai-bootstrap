@@ -9,14 +9,14 @@
             <div>
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $task->created_at }}</span>
             </div>
-            
             <div class="btn-toolbar">
                 @if (Auth::user()->id == $task->user_id)
                 
                 <div>
-                <p>status: {!! nl2br(e($task->status)) !!}</p>
-                <p>task: {!! nl2br(e($task->content)) !!}</p>
+                 <p>  status: {!! nl2br(e($task->status)) !!}</p>
+                 <p>  task: {!! nl2br(e($task->content)) !!}</p>
                 </div>
+                
                 
                 {!! link_to_route('tasks.edit', 'Edit', ['id' => $task->id], ['class' => 'btn btn-primary btn-xs']) !!} 
                    

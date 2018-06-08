@@ -1,6 +1,9 @@
+<!-- We don't use this page -->
+
 @extends('layouts.app')
 
 @section('content')
+
 
 <!-- Write content for each page here -->
 <h1>No.{{ $task->id }} edit page</h1>
@@ -28,5 +31,5 @@
     {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
         {!! Form::submit('delete', ['class' => 'btn btn-warning']) !!}
     {!! Form::close() !!}
-
+@endif
 @endsection
